@@ -22,7 +22,7 @@ The system consists of four main components:
 1. **Medical Document Processor** (`medical_document_processor.py`)
 2. **Clinical Summarization Trainer** (`clinical_summarization_trainer.py`)
 3. **Clinical NER Trainer** (`clinical_ner_trainer.py`)
-4. **Streamlit Web Application** (`streamlit_medical_analyzer.py`)
+4. **Streamlit Web Application** (`app.py`)
 
 ---
 
@@ -30,8 +30,7 @@ The system consists of four main components:
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd medical-document-analyzer
+git clone https://github.com/Aparnashree11/Clinical_Report_Summarizer.git
 ```
 
 2. **Create virtual environment**
@@ -48,8 +47,7 @@ pip install -r requirements.txt
 4. **Download required models**
 ```bash
 # For summarization training
-mkdir -p data
-# Download medical research datasets (train_v2.json, val_v2.json, test_before_cutoff_v2.json)
+# Download MedMentions dataset
 
 # For NER training
 # Download PubTator corpus (corpus_pubtator.txt.gz)
@@ -65,7 +63,7 @@ mkdir -p data
 - **Term Definition**: `bigscience/bloom-560m`
 
 ### Custom Trained Models
-- **Clinical Summarizer**: Fine-tuned T5 on medical literature
+- **Clinical Summarizer**: Fine-tuned T5 on medical literature (MedMentions)
 - **Medical NER**: ClinicalBERT fine-tuned on PubTator corpus
 
 ---
@@ -183,6 +181,5 @@ The system includes built-in medical abbreviation expansions:
    - Verify PDF is not password protected
    - Check if PDF contains extractable text
 
-- [T5 Paper](https://arxiv.org/abs/1910.10683)
-- [PubTator Database](https://www.ncbi.nlm.nih.gov/research/pubtator/)
-- [Transformers Documentation](https://huggingface.co/docs/transformers)
+---
+     
