@@ -1,0 +1,22 @@
+# Model files and checkpoints
+*.safetensors
+*.bin
+*.wandb
+checkpoint-*/
+*.model
+*.pkl
+
+# Logs
+*.log
+logs/
+content/logs/
+content/wandb/
+
+# Training outputs
+content/t5-clinical-summary/
+test/clinicalbert-ner*/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
